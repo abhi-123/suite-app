@@ -1,0 +1,25 @@
+{
+  "name": "suite-app",
+  "version": "1.0.0",
+  "description": "programming tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhi-123/suite-app.git"
+  },
+  "keywords": [
+    "json",
+    "url",
+    "encrypt",
+    "decrypt"
+  ],
+  "author": "AAA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhi-123/suite-app/issues"
+  },
+  "homepage": "https://github.com/abhi-123/suite-app#readme"
+}
