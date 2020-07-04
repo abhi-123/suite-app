@@ -27,6 +27,9 @@
     },
     "homepage": "https://github.com/abhi-123/suite-app#readme",
     "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "babel-loader": "^8.1.0",
         "bootstrap": "^4.5.0",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.6.0",
