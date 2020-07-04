@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
-            //  title: 'Output Management',
+            template: path.join(__dirname, 'src/index.html')
         }),
     ],
     output: {
