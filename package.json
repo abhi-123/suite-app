@@ -4,7 +4,8 @@
   "description": "programming tools",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/abhi-123/suite-app/issues"
   },
-  "homepage": "https://github.com/abhi-123/suite-app#readme"
+  "homepage": "https://github.com/abhi-123/suite-app#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
 }
