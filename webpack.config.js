@@ -14,6 +14,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src/index.html')
         }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src/test/test.html')
+        })
     ],
     output: {
         filename: 'bundle.js',
