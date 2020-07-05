@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/scss/app.scss">
     <script src="/js/main.js" defer></script>
 </head>
+
 <body>
     <div class="col-12">
         <div class="row">
@@ -24,14 +26,16 @@
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Output</label>
-                    <pre id="idOutputBox"></pre>
+                    <textarea name="outputBox" style="width:95%;height: 60vh;border-radius: 5px;" id="idOutputBox"></textarea>
+                    <!-- <pre id="idOutputBox"></pre> -->
                 </div>
             </div>
         </div>
-    
+
     </div>
     <div class="col-12 text-center">
         <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
     </div>
 </body>
+
 </html>
