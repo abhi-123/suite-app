@@ -1,4 +1,4 @@
-const clickMe = function (counter) {
+const clickMe = function(counter) {
     console.log(counter + 1);
 }
 
