@@ -1,5 +1,5 @@
 let inputEle = document.getElementById("idInputBox"); 
-var outputEle = document.getElementById("idOutputBox"); 
+let outputEle = document.getElementById("idOutputBox"); 
 const fnPrettify =function() { 
     console.log(inputEle.value);
     try {
