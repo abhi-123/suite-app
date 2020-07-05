@@ -3,7 +3,7 @@ let outputEle = document.getElementById("idOutputBox");
 const fnPrettify = function() {
     try {
         let inputJson = JSON.parse(inputEle.value);
-        outputEle.innerHTML = `<pre>${JSON.stringify(inputJson, undefined, 4)}</pre>`;
+        outputEle.innerHTML = `${JSON.stringify(inputJson, undefined, 4)}`;
     } catch (e) {
         outputEle.innerHTML = "Invalid json";
     }
