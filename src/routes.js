@@ -6,7 +6,7 @@ router.get("/", (request, response) => {
     response.sendFile(path.join(__dirname, "index.html"));
 });
 
-router.get("/test", (request, response) => {
+router.get("/json-prettifier", (request, response) => {
     response.sendFile(path.join(__dirname, "views/json/prettifier.html"));
 });
 
