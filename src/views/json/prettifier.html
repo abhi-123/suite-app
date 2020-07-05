@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Json Prettifier</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/scss/app.scss">
     <script src="/js/main.js" defer></script>
-
 </head>
 <body>
     <div class="col-12">
@@ -19,20 +18,20 @@
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Input</label>
-                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" placeholder="paste the JSON response here"></textarea>
+                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Output</label>
-                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" placeholder="paste the JSON response here"></textarea>
+                    <pre id="idOutputBox"></pre>
                 </div>
             </div>
         </div>
     
     </div>
     <div class="col-12 text-center">
-        <button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
     </div>
 </body>
 </html>
