@@ -1,21 +1,12 @@
 const express = require('express');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-
 const app = express();
-const config = require('./webpack.config.js');
-const compiler = webpack(config);
 
 const routes = require("./src/routes");
 
-// Tell express to use the webpack-dev-middleware and use the webpack.config.js
-// configuration file as a base.
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath,
-}));
-
 //Routes
 app.use("/", routes);
+
+app.use(express.static(__dirname + "/public"));
 
 // Serve the files on port 3000.
 app.listen(3000, function() {
