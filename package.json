@@ -24,12 +24,11 @@
         "url": "https://github.com/abhi-123/suite-app/issues"
     },
     "homepage": "https://github.com/abhi-123/suite-app#readme",
-    "devDependencies": {},
+    "devDependencies": {
+        "path": "^0.12.7"
+    },
     "dependencies": {
         "bootstrap": "^4.5.0",
-        "postcss-loader": "^3.0.0",
-        "precss": "^4.0.0",
-        "tether": "^1.4.7",
         "jquery": "^3.5.1",
         "popper.js": "^1.16.1",
         "express": "^4.17.1"
