@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Json Prettifier</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/scss/app.scss">
     <script src="/js/main.js" defer></script>
 </head>
@@ -20,7 +23,7 @@
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Input</label>
-                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
+                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here">1.</textarea>
                 </div>
             </div>
             <div class="col-6">
@@ -36,6 +39,9 @@
     <div class="col-12 text-center">
         <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
     </div>
+    <script src="jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="popper.js/dist/popper.js" charset="utf-8"></script>
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
 </body>
 
 </html>
