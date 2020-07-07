@@ -1,8 +1,8 @@
-let inputEle = document.getElementById("idInputBox");
-let outputEle = document.getElementById("idOutputBox");
-let verticalBar = document.getElementById("vertical-bar");
-let selectSpace = document.getElementById("IdSpaces");
-var filterArr = [],dataTypeArr=[],spaces=4;
+const inputEle = document.getElementById("idInputBox");
+const outputEle = document.getElementById("idOutputBox");
+const verticalBar = document.getElementById("vertical-bar");
+const selectSpace = document.getElementById("IdSpaces");
+let filterArr = [],dataTypeArr=[],spaces=4;
 
 const fnReplacer = function(key, value) {
     if(key=="")return value;
