@@ -10,7 +10,7 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/scss/app.scss">
+    <link rel="stylesheet" href="/scss/app.css">
     <script src="/js/main.js" defer></script>
 </head>
 
@@ -23,13 +23,17 @@
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Input</label>
-                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here">1.</textarea>
+                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group" style="margin: 20px;">
                     <label for="exampleFormControlTextarea1">Output</label>
-                    <textarea name="outputBox" style="width:95%;height: 60vh;border-radius: 5px;" id="idOutputBox"></textarea>
+                    <div id="output-wrapper" >
+                        <div id="vertical-bar"></div>
+                        <textarea name="outputBox" id="idOutputBox">
+                        </textarea>
+                    </div>
                     <!-- <pre id="idOutputBox"></pre> -->
                 </div>
             </div>
@@ -39,9 +43,9 @@
     <div class="col-12 text-center">
         <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
     </div>
-    <script src="jquery/dist/jquery.js" charset="utf-8"></script>
+    <!-- <script src="jquery/dist/jquery.js" charset="utf-8"></script>
     <script src="popper.js/dist/popper.js" charset="utf-8"></script>
-    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script> -->
 </body>
 
 </html>
