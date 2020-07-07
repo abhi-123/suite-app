@@ -1,7 +1,9 @@
-let inputEle = document.getElementById("idInputBox");
-let outputEle = document.getElementById("idOutputBox");
-let verticalBar = document.getElementById("vertical-bar");
-var filterArr = [],dataTypeArr=[];
+const inputEle = document.getElementById("idInputBox");
+const outputEle = document.getElementById("idOutputBox");
+const verticalBar = document.getElementById("vertical-bar");
+const selectSpace = document.getElementById("IdSpaces");
+let filterArr = [],dataTypeArr=[],spaces=4;
+
 const fnReplacer = function(key, value) {
     if(key=="")return value;
 
@@ -12,10 +14,15 @@ const fnReplacer = function(key, value) {
     return returnValue;
 }
 
+selectSpace.onchange = function (e) {
+    spaces = this.options[this.selectedIndex].value;
+    spaces = parseInt(spaces);
+}
+
 const fnPrettify = function() {
     try {
         let inputJson = JSON.parse(inputEle.value);
-        outputEle.innerHTML = `${JSON.stringify(inputJson, fnReplacer, 4)}`;
+        outputEle.innerHTML = `${JSON.stringify(inputJson, fnReplacer, spaces)}`;
         addLines(outputEle.innerHTML);
 
     } catch (e) {
