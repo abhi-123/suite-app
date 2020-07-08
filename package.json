@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "npm install",
-        "server": "node server.js"
+        "server": "nodemon server.js"
     },
     "repository": {
         "type": "git",
@@ -25,6 +25,7 @@
     },
     "homepage": "https://github.com/abhi-123/suite-app#readme",
     "devDependencies": {
+        "nodemon": "^2.0.4",
         "path": "^0.12.7"
     },
     "dependencies": {

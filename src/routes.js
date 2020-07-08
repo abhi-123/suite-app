@@ -7,7 +7,7 @@ router.get("/", (request, response) => {
 });
 
 router.get("/json-prettifier", (request, response) => {
-    response.sendFile(path.join(__dirname, "views/json/prettifier.html"));
+    response.sendFile(path.join(__dirname, "views/json/json.html"));
 });
 
 module.exports = router;
