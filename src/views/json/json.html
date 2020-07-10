@@ -20,22 +20,9 @@
     <div class="col-12">
         <div class="row">
             <div class="col-8 text-center mt-5 mb-3">
-                <h5>JSON Prettifier</h5>
+                <h3>JSON Prettifier</h3>
             </div>
-            <div class="col-4 mt-5 mb-3">
-                <select name="cars" id="IdSpaces" onchange="fnSetSpace()">
-                    <option value=1>Space Tab 1</option>
-                    <option value=2>Space Tab 2</option>
-                    <option value="3">Space Tab 3</option>
-                    <option value="4">Space Tab 4</option>
-                    <option value="5">Space Tab 5</option>
-                    <option value="6">Space Tab 6</option>
-                    <option value="3">Space Tab 7</option>
-                    <option value="4">Space Tab 8</option>
-                    <option value="5">Space Tab 9</option>
-                    <option value="6">Space Tab 10</option>
-                </select>
-            </div>
+            
             <div class="col-6">
                <div class="form-group margin-20">
                     <div for="dropdownMenuButton"><strong>Enter Property </strong>(comma separated)</div>
@@ -44,16 +31,37 @@
             </div>
 
             <div class="col-6">
-                <div class="form-group margin-20">
-                    <label for="dropdownMenuButton">Filter Response</label>
-                    <select name="filter-response" id="filter-response">
-                        <option value="string">String</option>
-                        <option value="boolean">Boolean</option>
-                        <option value="number">Number</option>
-                        <option value="object">Object</option>
-                    </select>
+                <div class="row margin-20">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div for="dropdownMenuButton"><strong>Filter Response Type</strong></div>
+                            <select name="filter-response" id="filter-response">
+                                <option value="string">String</option>
+                                <option value="boolean">Boolean</option>
+                                <option value="number">Number</option>
+                                <option value="object">Object</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="col-6">
+                        <div for="indentation"><strong>Indentation</strong></div>
+                        <select name="cars" id="IdSpaces" onchange="fnSetSpace()">
+                            <option value=1>Space Tab 1</option>
+                            <option value=2>Space Tab 2</option>
+                            <option value="3">Space Tab 3</option>
+                            <option value="4">Space Tab 4</option>
+                            <option value="5">Space Tab 5</option>
+                            <option value="6">Space Tab 6</option>
+                            <option value="3">Space Tab 7</option>
+                            <option value="4">Space Tab 8</option>
+                            <option value="5">Space Tab 9</option>
+                            <option value="6">Space Tab 10</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+
             <div class="col-6">
                 <div class="form-group margin-20">
                     <label for="exampleFormControlTextarea1">Input</label>
