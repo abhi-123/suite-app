@@ -1,5 +1,10 @@
 /* @import "bootstrap/dist/css/bootstrap.css"; */
 
+.header-title {
+    background: #ffdc9c;
+    padding: 1rem;
+}
+
 #idOutputBox {
     width: 85%;
 }
@@ -21,11 +26,21 @@
     margin: 20px;
 }
 
-#filter-response {
-    width: 60%;
-}
-
 #multi-input {
     width: 50%;
     height: 50px;
+}
+
+.box-input {
+    border-radius: 5px;
+    border: 1px solid #333;
+    padding: 15px;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
 }
