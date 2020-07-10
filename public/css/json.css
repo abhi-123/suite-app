@@ -16,3 +16,16 @@
     height: 60vh;
     display: flex;
 }
+
+.margin-20 {
+    margin: 20px;
+}
+
+#filter-response {
+    width: 20%;
+}
+
+#multi-input {
+    width: 50%;
+    height: 50px;
+}

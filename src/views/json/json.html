@@ -37,13 +37,31 @@
                 </select>
             </div>
             <div class="col-6">
-                <div class="form-group" style="margin: 20px;">
+               <div class="form-group margin-20">
+                    <div for="dropdownMenuButton"><strong>Enter Property </strong>(comma separated)</div>
+                    <input type="text" name="multi-input" id="multi-input">
+               </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group margin-20">
+                    <label for="dropdownMenuButton">Filter Response</label>
+                    <select name="filter-response" id="filter-response">
+                        <option value="string">String</option>
+                        <option value="boolean">Boolean</option>
+                        <option value="number">Number</option>
+                        <option value="object">Object</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group margin-20">
                     <label for="exampleFormControlTextarea1">Input</label>
                     <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
                 </div>
             </div>
             <div class="col-6">
-                <div class="form-group" style="margin: 20px;">
+                <div class="form-group margin-20">
                     <label for="exampleFormControlTextarea1">Output</label>
                     <div id="output-wrapper">
                         <div id="vertical-bar"></div>
