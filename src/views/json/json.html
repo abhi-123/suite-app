@@ -19,14 +19,14 @@
 <body>
     <div class="col-12">
         <div class="row">
-            <div class="col-8 text-center mt-5 mb-3">
+            <div class="col-12 text-center header-title mb-3">
                 <h3>JSON Prettifier</h3>
             </div>
             
             <div class="col-6">
                <div class="form-group margin-20">
-                    <div for="dropdownMenuButton"><strong>Enter Property </strong>(comma separated)</div>
-                    <input type="text" name="multi-input" id="multi-input">
+                    <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Enter Property </strong>(comma separated)</div>
+                    <input type="text" class="box-input" name="multi-input" id="multi-input">
                </div>
             </div>
 
@@ -34,8 +34,9 @@
                 <div class="row margin-20">
                     <div class="col-6">
                         <div class="form-group">
-                            <div for="dropdownMenuButton"><strong>Filter Response Type</strong></div>
-                            <select name="filter-response" id="filter-response">
+                            <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Output Filter</strong></div>
+                            <select name="filter-response" class="box-input width-80">
+                                <option value="select">Select</option>
                                 <option value="string">String</option>
                                 <option value="boolean">Boolean</option>
                                 <option value="number">Number</option>
@@ -45,10 +46,11 @@
                     </div>
         
                     <div class="col-6">
-                        <div for="indentation"><strong>Indentation</strong></div>
-                        <select name="cars" id="IdSpaces" onchange="fnSetSpace()">
-                            <option value=1>Space Tab 1</option>
-                            <option value=2>Space Tab 2</option>
+                        <div for="indentation" class="margin-bottom-10"><strong>Indentation</strong></div>
+                        <select name="cars" id="IdSpaces" class="box-input width-80" onchange="fnSetSpace()">
+                            <option value="select">Select</option>
+                            <option value="1">Space Tab 1</option>
+                            <option value="2">Space Tab 2</option>
                             <option value="3">Space Tab 3</option>
                             <option value="4">Space Tab 4</option>
                             <option value="5">Space Tab 5</option>
