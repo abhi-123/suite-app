@@ -11,6 +11,7 @@ const port = process.env.PORT || 8080;
 app.use("/", routes);
 
 app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/images"));
 // app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 // app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect JS bootstrap
 // app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
