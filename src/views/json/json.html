@@ -14,82 +14,111 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/json.css">
     <script src="/js/json.js" defer></script>
+    <script src="/js/index.js" defer></script>
 </head>
 
 <body>
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12 text-center header-title mb-3">
-                <h3>JSON Prettifier</h3>
-            </div>
-            
-            <div class="col-6">
-               <div class="form-group margin-20">
-                    <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Enter Property </strong>(comma separated)</div>
-                    <input type="text" class="box-input" name="multi-input" id="multi-input">
-               </div>
-            </div>
-
-            <div class="col-6">
-                <div class="row margin-20">
-                    <div class="col-6">
-                        <div class="form-group">
-                            <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Output Filter</strong></div>
-                            <select name="filter-response" class="box-input width-80">
-                                <option value="select">Select</option>
-                                <option value="string">String</option>
-                                <option value="boolean">Boolean</option>
-                                <option value="number">Number</option>
-                                <option value="object">Object</option>
-                            </select>
+    <div class="main">
+        <div class="nav-section">
+            <div class="container">
+                <div class="col-12 text-center header-title mb-3">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#">{ JSON Prettifier }</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                            
+                        <div class="collapse navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+    
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tools
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/json-prettifier">JSON Prettifier</a>
+                                        <a class="dropdown-item" href="/url-shortner">URL Shortner</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
         
-                    <div class="col-6">
-                        <div for="indentation" class="margin-bottom-10"><strong>Indentation</strong></div>
-                        <select name="cars" id="IdSpaces" class="box-input width-80" onchange="fnSetSpace()">
-                            <option value="select">Select</option>
-                            <option value="1">Space Tab 1</option>
-                            <option value="2">Space Tab 2</option>
-                            <option value="3">Space Tab 3</option>
-                            <option value="4">Space Tab 4</option>
-                            <option value="5">Space Tab 5</option>
-                            <option value="6">Space Tab 6</option>
-                            <option value="3">Space Tab 7</option>
-                            <option value="4">Space Tab 8</option>
-                            <option value="5">Space Tab 9</option>
-                            <option value="6">Space Tab 10</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="form-group margin-20">
-                    <label for="exampleFormControlTextarea1">Input</label>
-                    <textarea style="width:95%;height: 60vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="form-group margin-20">
-                    <label for="exampleFormControlTextarea1">Output</label>
-                    <div id="output-wrapper">
-                        <div id="vertical-bar"></div>
-                        <textarea name="outputBox" id="idOutputBox" readonly>
-                        </textarea>
-                    </div>
-                    <!-- <pre id="idOutputBox"></pre> -->
+                    </nav>
                 </div>
             </div>
         </div>
-
-    </div>
-    <div class="col-12 text-center">
-        <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
-    </div>
-    <!-- <script src="jquery/dist/jquery.js" charset="utf-8"></script>
-    <script src="popper.js/dist/popper.js" charset="utf-8"></script>
-    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script> -->
+        <div class="json-main">
+            <div class="row">
+                <div class="json-feature">
+                    <div class="json-input-box">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Input</label>
+                            <textarea style="width:95%;height: 70vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
+                        </div>
+                    </div>
+    
+                    <div class="json-helpers">
+                        <div class="multi-input">
+                            <div class="form-group">
+                                <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Enter Property </strong><div class="property-sub-text">(comma separated)</div></div>
+                                <input type="text" class="box-input" name="multi-input" id="multi-input">
+                            </div>
+                        </div>
+        
+                        <div class="output-filter">
+                            <div class="form-group">
+                                <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Output Filter</strong></div>
+                                <select name="filter-response" class="box-input width-80">
+                                    <option value="select">Select</option>
+                                    <option value="string">String</option>
+                                    <option value="boolean">Boolean</option>
+                                    <option value="number">Number</option>
+                                    <option value="object">Object</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        <div class="identation">
+                            <div for="indentation" class="margin-bottom-10"><strong>Indentation</strong></div>
+                            <select name="cars" id="IdSpaces" class="box-input width-80" onchange="fnSetSpace()">
+                                <option value="select">Select</option>
+                                <option value="1">Space Tab 1</option>
+                                <option value="2">Space Tab 2</option>
+                                <option value="3">Space Tab 3</option>
+                                <option value="4">Space Tab 4</option>
+                                <option value="5">Space Tab 5</option>
+                                <option value="6">Space Tab 6</option>
+                                <option value="3">Space Tab 7</option>
+                                <option value="4">Space Tab 8</option>
+                                <option value="5">Space Tab 9</option>
+                                <option value="6">Space Tab 10</option>
+                            </select>
+                        </div>
+    
+                        <div class="text-center btn-submit">
+                            <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
+                        </div>
+                    </div>
+    
+                    <div class="json-output-box">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Output</label>
+                            <div id="output-wrapper">
+                                <div id="vertical-bar"></div>
+                                <textarea style="height:70vh;" name="outputBox" id="idOutputBox" readonly>
+                                </textarea>
+                            </div>
+                            <!-- <pre id="idOutputBox"></pre> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
+   </div>
 </body>
 
 </html>

@@ -14,10 +14,64 @@
 </head>
 
 <body>
-    <div class="col-12 text-center mt-5 mb-3">
-        <h4>Welcome to the products!!!</h4>
+    <div class="main">
+        <div class="nav-section">
+            <div class="container">
+                <div class="col-12 text-center header-title mb-3">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#">{ JSON Prettifier }</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                            
+                        <div class="collapse navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+    
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tools
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/json-prettifier">JSON Prettifier</a>
+                                        <a class="dropdown-item" href="/url-shortner">URL Shortner</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+        
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container product-section">
+            <div class="col-12 text-center margin-tb-20 mt-5 mb-3">
+                <h4 class="col-12">Products</h4>
+            </div>
+            <div id="productsCard" class="col-12">
+                <div class="product-cards col-3">
+                    <section>
+                        <img src="prettify.png" alt="">
+                    </section>
+                    <h4 class="margin-tb-20">JSON Prettifier</h4>
+                    <div class="description">
+                        Use this tool to Prettify the code and can also validate the changes
+                    </div>
+                    <div class="link margin-tb-20">
+                        <a target="_blank" href="/json-prettifier">
+                            <p>Use now &#8594;</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
     </div>
-    <div id="productsCard" class="col-12"></div>
 </body>
 
+<script src="jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="popper.js/dist/popper.js" charset="utf-8"></script>
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
 </html>

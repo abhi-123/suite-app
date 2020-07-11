@@ -1,8 +1,47 @@
 /* @import "bootstrap/dist/css/bootstrap.css"; */
 
-.header-title {
-    background: #ffdc9c;
-    padding: 1rem;
+body {
+    overflow: hidden;
+}
+
+.nav-section {
+    background: black;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: white;
+}
+
+li.nav-item {
+    margin: 0 30px;
+}
+
+li.nav-item a {
+    color: white;
+}
+
+li.nav-item a:hover {
+    color: white;
+}
+
+li.nav-item.active {
+    border: 1px dotted black;
+}
+
+.dropdown-menu a, .dropdown-menu a:hover {
+    color: black !important;
+}
+
+.dropdown:hover .dropdown-menu { 
+    display: block; 
+}
+
+.product-section {
+    height: 80vh;
+}
+
+.padding-5 {
+    padding: 5px;
 }
 
 #idOutputBox {
@@ -15,6 +54,7 @@
     background: #333;
     overflow: hidden;
     padding: 4px;
+    height: 70vh;
 }
 
 #output-wrapper {
@@ -27,8 +67,8 @@
 }
 
 #multi-input {
-    width: 50%;
-    height: 50px;
+    width: 80%;
+    height: 100px;
 }
 
 .box-input {
@@ -43,4 +83,49 @@
 
 .margin-bottom-10 {
     margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.margin-tb-20{
+    margin: 20px 0px;
+}
+
+.json-main {
+    height: 84vh;
+}
+
+.json-feature {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.json-input-box, .json-output-box {
+    width: 40%;
+}
+
+.json-helpers {
+    width: 18%;
+    padding: 5px;
+    margin-top: 40px;
+}
+
+.btn-submit {
+    margin-top:40px;
+    width:80%;
+}
+
+.property-sub-text {
+    font-size: 13px;
+}
+
+.footer-copyright {
+    background: black;
+    color: white;
+    font-weight: lighter;
 }
