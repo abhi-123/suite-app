@@ -36,6 +36,10 @@ li.nav-item.active {
     display: block; 
 }
 
+#navbarMenu {
+    margin-left: 50px;
+}
+
 .product-section {
     height: 80vh;
 }
