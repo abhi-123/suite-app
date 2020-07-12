@@ -90,7 +90,7 @@ app.use(function(req, res, next) {
 });
 
 // ExpressJS middleware for serving static files
-// app.use(express.static('public'));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
