@@ -129,6 +129,10 @@ img {
     font-size: 13px;
 }
 
+.output-filter label { 
+    width: 100%;
+ }
+
 .footer-copyright {
     background: black;
     color: white;
