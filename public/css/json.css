@@ -1,7 +1,12 @@
 /* @import "bootstrap/dist/css/bootstrap.css"; */
 
 body {
-    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    max-width: inherit;
 }
 
 .nav-section {
@@ -38,10 +43,6 @@ li.nav-item.active {
 
 #navbarMenu {
     margin-left: 50px;
-}
-
-.product-section {
-    height: 80vh;
 }
 
 .padding-5 {
@@ -99,7 +100,7 @@ img {
 }
 
 .json-main {
-    height: 84vh;
+    height: 83.5vh;
 }
 
 .json-feature {
