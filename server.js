@@ -1,10 +1,5 @@
 const path = require('path');
 const express = require('express');
-var jsdom = require('jsdom');
-$ = require('jquery')(new jsdom.JSDOM().window);
-// const $ = (require('jquery'));
-// var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
-// require('./public/js/models/UrlShorten')
 const port = process.env.PORT || 8080;
 var bodyParser = require('body-parser'),
     app = express(),
