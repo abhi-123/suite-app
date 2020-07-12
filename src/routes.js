@@ -40,7 +40,8 @@ router.post('/shorten', function(req, res, next) {
         } else {
             console.log('entry NOT found in db, saving new');
             var url = new URL({
-                url: urlData
+                url: urlData,
+                _id: ((Math.random() * 1e32 + 1) * Date.now()).toString(36).slice(2, 7)
             });
             url.save(function(err) {
                 if (err) return console.error(err);
@@ -55,7 +56,7 @@ router.post('/shorten', function(req, res, next) {
     });
 });
 
-router.get('/u/:hash', function(req, res) {
+router.get('/:hash', function(req, res) {
     var baseid = req.params.hash;
     var id = atob(baseid);
     URL.findOne({ _id: id }, function(err, doc) {

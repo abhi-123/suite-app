@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 var countersSchema = new mongoose.Schema({
-    // _id: { type: String, required: true },
+    _id: { type: String, required: true },
     count: { type: Number, default: 0 }
 });
 
 // URL Collection Schema
 var urlSchema = new mongoose.Schema({
-    // _id: { type: Number },
+    _id: { type: String },
     url: '',
     created_at: ''
 });
