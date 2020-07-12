@@ -18,11 +18,21 @@ var APP = (function() {
                 success: function(data) {
                     console.log(data);
                     var _buildUrl = window.location.origin + '/u/' + data.hash;
-                    $('.shortened-url').html('<a href="' + _buildUrl + '" target="_blank">' + _buildUrl + '</a>');
+                    $('.shortened-url').val(_buildUrl);
                     $('#shorten_area').removeClass('hide').show();
                 }
             })
         });
+
+        $('.shortened-url').on('click', function(e) {
+            e.preventDefault();
+            $(this).select();
+            document.execCommand('copy');
+
+            $(".inline-text").html("Text Copied to Clipboard !!");
+
+        });
+
         // $("#copy_url").click(function() {
         //     let text = $('.shortened-url').text();
         //     console.log(text);
