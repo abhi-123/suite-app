@@ -27,13 +27,13 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                            
+
                         <div class="collapse navbar-collapse" id="navbarMenu">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                                 </li>
-    
+
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Tools
@@ -45,7 +45,7 @@
                                 </li>
                             </ul>
                         </div>
-        
+
                     </nav>
                 </div>
             </div>
@@ -59,15 +59,17 @@
                             <textarea style="width:95%;height: 70vh;border-radius: 5px;" class="form-control" name="dataInput" id="idInputBox" placeholder="paste the JSON response here"></textarea>
                         </div>
                     </div>
-    
+
                     <div class="json-helpers">
                         <div class="multi-input">
                             <div class="form-group">
-                                <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Enter Property </strong><div class="property-sub-text">(comma separated)</div></div>
+                                <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Enter Property </strong>
+                                    <div class="property-sub-text">(comma separated)</div>
+                                </div>
                                 <input type="text" class="box-input" name="multi-input" id="multi-input">
                             </div>
                         </div>
-        
+
                         <div class="output-filter">
                             <div class="form-group">
                                 <div for="dropdownMenuButton" class="margin-bottom-10"><strong>Output Filter</strong></div>
@@ -80,7 +82,7 @@
                                 </select>
                             </div>
                         </div>
-                
+
                         <div class="identation">
                             <div for="indentation" class="margin-bottom-10"><strong>Indentation</strong></div>
                             <select name="cars" id="IdSpaces" class="box-input width-80" onchange="fnSetSpace()">
@@ -97,12 +99,12 @@
                                 <option value="6">Space Tab 10</option>
                             </select>
                         </div>
-    
+
                         <div class="text-center btn-submit">
                             <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
                         </div>
                     </div>
-    
+
                     <div class="json-output-box">
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Output</label>
@@ -116,9 +118,19 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
         <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
-   </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="col-12 text-center">
+        <button type="button" class="btn btn-success" onclick="fnPrettify()">Submit</button>
+    </div>
+    <!-- <script src="jquery/dist/jquery.js" charset="utf-8"></script> -->
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <!-- <script src="popper.js/dist/popper.js" charset="utf-8"></script> -->
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
 </body>
 
 </html>
