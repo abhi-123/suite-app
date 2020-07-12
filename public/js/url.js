@@ -17,7 +17,7 @@ var APP = (function() {
                 },
                 success: function(data) {
                     console.log(data);
-                    var _buildUrl = window.location.origin + '/' + data.hash;
+                    var _buildUrl = window.location.origin + '/u/' + data.hash;
                     $('.shortened-url').html('<a href="' + _buildUrl + '" target="_blank">' + _buildUrl + '</a>');
                     $('#shorten_area').removeClass('hide').show();
                 }
