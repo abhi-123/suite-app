@@ -25,6 +25,7 @@
     },
     "homepage": "https://github.com/abhi-123/suite-app#readme",
     "devDependencies": {
+        "jsdom": "^16.3.0",
         "nodemon": "^2.0.4",
         "path": "^0.12.7"
     },
@@ -32,6 +33,11 @@
         "bootstrap": "^4.5.0",
         "jquery": "^3.5.1",
         "popper.js": "^1.16.1",
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "atob": "^2.0.3",
+        "body-parser": "^1.15.2",
+        "btoa": "^1.1.2",
+        "dotenv": "^4.0.0",
+        "mongoose": "^4.13.7"
     }
 }
