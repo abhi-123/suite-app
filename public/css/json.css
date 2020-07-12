@@ -95,6 +95,10 @@ img {
     max-height: 100%;
 }
 
+.img-section {
+    height: 25vh;
+}
+
 .margin-tb-20{
     margin: 20px 0px;
 }
@@ -133,4 +137,18 @@ img {
     background: black;
     color: white;
     font-weight: lighter;
+}
+
+.inline-text {
+    color: grey;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#shorten_area {
+    margin-top: 40px;
+}
+
+.shortened-url {
+    margin-top: 20px;
 }

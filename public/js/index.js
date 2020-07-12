@@ -73,7 +73,7 @@ for (let i = 0; i < products.length; i++) {
     html += `
     ${i%3 === 0 ? '<div class="row" style="margin-left:17px;">': ''}
     <div class="product-cards col-4">
-    <section>
+    <section class="img-section">
         <a href="${products[i].href}">
             <img src="${products[i].img}" alt="">
         </a>

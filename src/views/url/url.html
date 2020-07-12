@@ -5,11 +5,43 @@
     <meta charset="UTF-8">
     <title>URL Shortener with Node.js + MongoDB - ScaleGrid</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/url.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/json.css">
 </head>
 
 <body>
+        <div class="nav-section">
+            <div class="container">
+                <div class="col-12 text-center header-title mb-3">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">{ URL Shortener }</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tools
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/json-prettifier">JSON Prettifier</a>
+                                        <a class="dropdown-item" href="/url-shortner">URL Shortner</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
     <div class="container" style="padding-top: 100px;">
         <div class="page-header">
             <!-- <h2>URL Shortener with Node.js + MongoDB</h2> -->
@@ -18,11 +50,14 @@
             <div class="input-group">
                 <input type="url" class="form-control text-url" placeholder="Enter a URL to shorten..." />
                 <span class="input-group-btn">
-                        <button type="submit" class="btn btn-success btn-shorten">Shorten</button>
-                    </span>
+                    <button type="submit" class="btn btn-success btn-shorten">Shorten</button>
+                </span>
             </div>
         </form><br />
-        <div id="shorten_area" class="hide">Shortened URL: <span class="shortened-url"></span></div>
+        <div id="shorten_area" class="hide">Shortened URL:<br />
+            <input class="form-control shortened-url" style="width:100%;" readonly></input>
+            <div class="inline-text"></div>
+        </div>
         <!-- <button class="btn btn-success" id="copy_url">Copy Url</button> -->
 
     </div>
