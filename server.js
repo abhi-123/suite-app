@@ -100,7 +100,7 @@ app.use("/", routes);
 // app.use(express.static(__dirname + "/public"));
 console.log((__dirname + "/public/images"));
 
-app.use(express.static(__dirname + "/public/images"));
+// app.use(express.static(__dirname + "/public/images/"));
 
 // keep adding required node_modules to this array.
 const nm_dependencies = ['bootstrap', 'jquery', 'popper.js'];
