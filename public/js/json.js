@@ -7,14 +7,13 @@ const selectDataType = document.getElementById("id-data-type-filter");
 
 let filterArr = [],dataTypeArr=[],spaces=4;
 
-const fnReplacer = function(key, value) {
-    if(key=="")return value;
-
-    let returnValue=value;
-    if(filterArr.length && !filterArr.includes(key))returnValue=undefined;
-    if(dataTypeArr.length && !dataTypeArr.includes(typeof value))returnValue=undefined;
-    
-    return returnValue;
+const filterInputObj = function(obj){
+    let res=JSON.parse(JSON.stringify(obj));
+    Object.keys(obj).forEach(key=>{
+        if(filterArr.length && !filterArr.includes(key))delete res[key];
+        else if(dataTypeArr.length && !dataTypeArr.includes(typeof res[key]))delete res[key];
+    })
+    return res;
 }
 
 const setFilterProp = function(){
@@ -34,16 +33,12 @@ const setFilterProp = function(){
     })
 }
 
-// selectSpace.onchange = function (e) {
-//     spaces = this.options[this.selectedIndex].value;
-//     spaces = parseInt(spaces);
-// }
-
 const fnPrettify = function() {
     setFilterProp();
     try {
         let inputJson = JSON.parse(inputEle.value);
-        outputEle.innerHTML = `${JSON.stringify(inputJson, fnReplacer, spaces)}`;
+        inputJson = filterInputObj(inputJson);
+        outputEle.innerHTML = `${JSON.stringify(inputJson, undefined, spaces)}`;
         addLines(outputEle.innerHTML);
     } catch (e) {
         outputEle.innerHTML = "Invalid json";
