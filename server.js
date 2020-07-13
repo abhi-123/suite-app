@@ -10,17 +10,27 @@ var bodyParser = require('body-parser'),
 const { countersSchema, urlSchema } = require("./src/db/model");
 const routes = require("./src/routes");
 
-const mongoURI = "mongodb://localhost/url-shortner";
 // const mongoose = require("mongoose");
 const connectOptions = {
     keepAlive: true,
     reconnectTries: Number.MAX_VALUE
 };
-mongoose.Promise = global.Promise;
-promise = mongoose.connect(mongoURI, connectOptions, (err, db) => {
-    if (err) console.log(`Error`, err);
-    console.log(`Connected to MongoDB`);
+
+// const mongoURI = "mongodb://localhost/url-shortner";
+const MongoClient = require('mongodb').MongoClient;
+const mongoURI = `mongodb+srv://abhi_saxena1809:ashanmol123@my-suite-app-cluster.prr8f.mongodb.net/<suite-app>?retryWrites=true&w=majority`
+const client = new MongoClient(mongoURI, { useNewUrlParser: true, ...connectOptions });
+promise = client.connect(err => {
+  const collection = client.db("suite-app").collection("url-shortner");
+  // perform actions on the collection object
+  client.close();
 });
+
+// mongoose.Promise = global.Promise;
+// promise = mongoose.connect(mongoURI, connectOptions, (err, db) => {
+//     if (err) console.log(`Error`, err);
+//     console.log(`Connected to MongoDB`);
+// });
 
 const URL = mongoose.model('URL', urlSchema);
 
