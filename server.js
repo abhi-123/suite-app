@@ -13,33 +13,34 @@ const routes = require("./src/routes");
 // const mongoose = require("mongoose");
 const connectOptions = {
     keepAlive: true,
-    reconnectTries: Number.MAX_VALUE
+    useUnifiedTopology: true,
+    useNewUrlParser: true
 };
 
 // const mongoURI = "mongodb://localhost/url-shortner";
 const MongoClient = require('mongodb').MongoClient;
 const mongoURI = `mongodb+srv://abhi_saxena1809:ashanmol123@my-suite-app-cluster.prr8f.mongodb.net/<suite-app>?retryWrites=true&w=majority`
-const client = new MongoClient(mongoURI, { useNewUrlParser: true, ...connectOptions });
-promise = client.connect(err => {
-  const collection = client.db("suite-app").collection("url-shortner");
-  // perform actions on the collection object
-  client.close();
-});
+    // const client = new MongoClient(mongoURI, { useNewUrlParser: true, ...connectOptions });
+    // promise = client.connect(err => {
+    //   const collection = client.db("suite-app").collection("url-shortner");
+    //   // perform actions on the collection object
+    //   client.close();
+    // });
 
-// mongoose.Promise = global.Promise;
-// promise = mongoose.connect(mongoURI, connectOptions, (err, db) => {
-//     if (err) console.log(`Error`, err);
-//     console.log(`Connected to MongoDB`);
-// });
+mongoose.Promise = global.Promise;
+promise = mongoose.connect(mongoURI, connectOptions, (err, db) => {
+    if (err) console.log(`Error`, err);
+    console.log(`Connected to MongoDB`);
+});
 
 const URL = mongoose.model('URL', urlSchema);
 
 promise.then(function(db) {
     console.log('connected!');
-    URL.remove({}, function() {
+    URL.deleteMany({}, function() {
         console.log('URL collection removed');
     })
-    Counter.remove({}, function() {
+    Counter.deleteMany({}, function() {
         console.log('Counter collection removed');
         var counter = new Counter({ _id: ((Math.random() * 1e32 + 1) * Date.now()).toString(36).slice(2, 7), count: 10000 });
         counter.save(function(err) {
