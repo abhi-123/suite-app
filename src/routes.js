@@ -24,6 +24,10 @@ router.get("/url-shortner", (request, response) => {
     response.sendFile(path.join(__dirname, "views/url/url.html"));
 });
 
+router.get("/regex", (request, response) => {
+    response.sendFile(path.join(__dirname, "views/regex.html"))
+})
+
 
 router.post('/shorten', function(req, res, next) {
     console.log(req.body.url);
