@@ -156,3 +156,14 @@ img {
 .shortened-url {
     margin-top: 20px;
 }
+
+#regex-exp-input, #regex-string-input {
+    width: 100%;
+    height: 7vh;
+    outline: none;
+    border-style: none;
+}
+
+.display-none {
+    display: none;
+}
