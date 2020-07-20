@@ -1,49 +1,53 @@
-
 document.getElementById("regex-validate").addEventListener("click", function() {
 
     const reg = new RegExp(document.getElementById("regex-exp-input").value, 'g');
-    const str = document.getElementById("regex-string-input").value;
-    let text;
-    let results = reg.test(str);
+    let str = document.getElementById("regex-string-input").value;
+    // const term; // search query we want to highlight in results 
+    // const results; // search results
 
-    if (reg === "" || str === "") {
-        results = false;
-    }
+    str = str.replace(new RegExp(document.getElementById("regex-exp-input").value, "gi"), (match) => `<mark>${match}</mark>`);
+    console.log(str);
+    // let text;
+    // let results = reg.test(str);
 
-    let regResults;
-    let obj = [];
-    while( (regResults = reg.exec(str)) !== null ) {        
-        let index = regResults.index;
-        let text = regResults[0];
+    // if (reg === "" || str === "") {
+    //     results = false;
+    // }
 
-        let capturedGroups 
-                = regResults.slice(1, regResults.length)
-                                .map((arr) => {
-                                    return arr;
-                                });
-        obj.push({
-            index,
-            text,
-            capturedGroups
-        });                        
-    }
+    // let regResults;
+    // let obj = [];
+    // while( (regResults = reg.exec(str)) !== null ) {        
+    //     let index = regResults.index;
+    //     let text = regResults[0];
 
-    let initialIndex = 0;
-    let div = "";
+    //     let capturedGroups 
+    //             = regResults.slice(1, regResults.length)
+    //                             .map((arr) => {
+    //                                 return arr;
+    //                             });
+    //     obj.push({
+    //         index,
+    //         text,
+    //         capturedGroups
+    //     });                        
+    // }
 
-    //Displaying Matched Text and Captured Groups
-    for(let i = 0;i< obj.length; i++) {
+    // let initialIndex = 0;
+    // let div = "";
 
-        div = document.createElement("div");
-        div.innerHTML = `<div><b>Matched Text :</b> ${obj[i].text}</div>`
-        for(let j=0;j<obj[i].capturedGroups.length;j++) {
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = `<div><b>Captured Group ${j+1}:</b>  ${obj[i].capturedGroups[j]}</div>`;
-            div.appendChild(tempDiv);
-        }
-        document.getElementById("regex-results").innerHTML = div.innerHTML;
-    }
+    // //Displaying Matched Text and Captured Groups
+    // for(let i = 0;i< obj.length; i++) {
+
+    //     div = document.createElement("div");
+    //     div.innerHTML = `<div><b>Matched Text :</b> ${obj[i].text}</div>`
+    //     for(let j=0;j<obj[i].capturedGroups.length;j++) {
+    //         let tempDiv = document.createElement("div");
+    //         tempDiv.innerHTML = `<div><b>Captured Group ${j+1}:</b>  ${obj[i].capturedGroups[j]}</div>`;
+    //         div.appendChild(tempDiv);
+    //     }
+    //     document.getElementById("regex-results").innerHTML = div.innerHTML;
+    // }
 
     document.getElementById("valid-text").classList.remove("display-none");
-    document.getElementById("regex-output-boolean").innerHTML = results;
+    document.getElementById("regex-output-boolean").innerHTML = str;
 });
