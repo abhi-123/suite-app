@@ -9,7 +9,15 @@ document.getElementById("regex-string-input").addEventListener("keyup", function
     console.log(str);
 
     document.getElementById("regex-string-input").innerHTML = str;
-
+    // console.log(str);
+    // var isValid = true;
+    // try {
+    //     console.log('in try')
+    //     new RegExp('abc ([a-z]+) (([a-z]+))');
+    // } catch (e) {
+    //     console.log(e)
+    //     isValid = false;
+    // }
     // let text;
     // let results = reg.test(str);
 
