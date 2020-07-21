@@ -1,12 +1,15 @@
-document.getElementById("regex-validate").addEventListener("click", function() {
+document.getElementById("regex-string-input").addEventListener("keyup", function(e) {
 
     const reg = new RegExp(document.getElementById("regex-exp-input").value, 'g');
-    let str = document.getElementById("regex-string-input").value;
+    let str = document.getElementById("regex-string-input").textContent;
     // const term; // search query we want to highlight in results 
     // const results; // search results
 
     str = str.replace(new RegExp(document.getElementById("regex-exp-input").value, "gi"), (match) => `<mark>${match}</mark>`);
     console.log(str);
+
+    document.getElementById("regex-string-input").innerHTML = str;
+
     // let text;
     // let results = reg.test(str);
 
@@ -47,7 +50,4 @@ document.getElementById("regex-validate").addEventListener("click", function() {
     //     }
     //     document.getElementById("regex-results").innerHTML = div.innerHTML;
     // }
-
-    document.getElementById("valid-text").classList.remove("display-none");
-    document.getElementById("regex-output-boolean").innerHTML = str;
 });
