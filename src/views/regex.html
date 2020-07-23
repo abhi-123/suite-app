@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
     <title>Suite App - Json Prettifier, Json formatter,Json pretty print, filter json properties by name and dataType,fix spaces in json,url shortner</title>
     <meta name="description" content="giving you the functionality to format or prettify or pretty print your json,filter json by property name and data type and format json by choosing spaces,you can use our url shortner to shorten your url">
-    <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/json.css">
+    <script src="jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="/js/regex.js" defer></script>
 </head>
 
@@ -48,18 +49,23 @@
         </div>
         <div class="container product-section">
            <div>
-                <div>
-                    <div style="background: antiquewhite;height: 5vh;">Expression</div>
-                    <input type="text" id="regex-exp-input" placeholder="Enter regex expression">
+                <div class="form-group">
+                    <div style="margin-top: 30px">
+                        <h5>Regular Expression</h5>
+                        <input type="text" class="form-control" id="regex-exp-input" placeholder="Please enter your regex expression">
+                    </div>
                 </div>
 
-                <div>
-                    <div style="background: antiquewhite;height: 5vh;">Text</div>
-                    <div contenteditable="true" id="regex-string-input" placeholder="Enter Text"></div>
+                <div style="margin-top: 50px">
+                    <h5>String</h5>
+                    <textarea type="text" style="height:22vh;" id="regex-string-input" placeholder="Enter Text"></textarea>
                 </div>
 
-                <div style="margin-top:30px;">
-                    <span id="regex-output-boolean"></span>
+                <div style="margin-top:50px;">
+                    <h5>Matching Results</h5>
+                    <div class="">
+                        <span id="regex-output-boolean"></span>
+                    </div>
                     <div id="regex-results"></div>
                 </div>
 
@@ -68,10 +74,4 @@
         <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright</div> -->
     </div>
 </body>
-
-<script src="jquery/dist/jquery.js" charset="utf-8"></script>
-<!-- <script src="popper.js/dist/popper.js" charset="utf-8"></script> -->
-<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
-<script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
-
 </html>

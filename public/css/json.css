@@ -158,12 +158,29 @@ img {
 }
 
 #regex-exp-input, #regex-string-input {
-    width: 100%;
+    /* width: 100%;
     height: 7vh;
     outline: none;
-    border-style: none;
+    border-style: none; */
+
+    width: 100%;
+    height: 8vh;
+    border: 1px solid #eee;
+    padding: 30px;
+}
+
+.error-box {
+    border: 1px solid #a94442 !important;
 }
 
 .display-none {
     display: none;
+}
+
+mark {
+    background: lightblue;
+}
+
+.input {
+    background-color: #fbf9f9;
 }
