@@ -32,7 +32,7 @@
         "bootstrap": "^4.5.0",
         "jquery": "^3.5.1",
         "popper.js": "^1.16.1",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "atob": "^2.0.3",
         "body-parser": "^1.15.2",
         "btoa": "^1.1.2",
